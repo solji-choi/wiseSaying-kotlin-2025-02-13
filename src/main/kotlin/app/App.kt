@@ -14,15 +14,12 @@ class App(
             print("명령) ")
             val cmd = scanner.nextLine()
 
-            if (cmd == "종료") break;
-
-            if (cmd == "등록") {
-                controller.actionAdd(scanner);
-            }
-
-
+            if (cmd == "종료")
+                break;
+            else if (cmd == "등록")
+                controller.actionAdd(scanner)
+            else if (cmd == "목록")
+                controller.actionList()
         }
-
-
-    };
+    }
 }
