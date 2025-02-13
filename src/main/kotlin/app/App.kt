@@ -1,9 +1,11 @@
 package com.ll.app
 
+import com.ll.app.controller.Controller
 import java.util.*
 
 class App(
-    val scanner: Scanner = Scanner(System.`in`)
+    val scanner: Scanner = Scanner(System.`in`),
+    val controller: Controller = Controller()
 ) {
     fun run() {
         println("== 명언 앱 ==")
@@ -15,10 +17,7 @@ class App(
             if (cmd == "종료") break;
 
             if (cmd == "등록") {
-                print("명언 : ")
-                val content = scanner.nextLine()
-                print("작가 : ")
-                val author = scanner.nextLine()
+                controller.actionAdd(scanner);
             }
 
 
