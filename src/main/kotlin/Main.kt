@@ -1,11 +1,9 @@
 package com.ll
 
+import com.ll.app.App
+
 fun main() {
-    val name = "Kotlin"
+    val app = App()
 
-    println("Hello, " + name + "!")
-
-    for (i in 1..5) {
-        println("i = $i")
-    }
+    app.run()
 }
